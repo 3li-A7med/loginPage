@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Registration</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="container">
+    <form id="registrationForm" class="active">
+      <h2>Register</h2>
+      <label for="username">Username</label>
+      <input type="text" id="username" class="userName" required>
+      <div class="userError d-none error"></div> 
+      <label for="email">Email</label>
+      <input type="email" id="email" class="emailUser" required>
+      <div class="emailError d-none error"></div> 
+      <label for="password">Password</label>
+      <input type="password" id="password" class="passwordUser" required>
+      <div class="passError d-none error"></div> 
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" required>
+      <div class="confirmError d-none error"></div> 
+
+      <button type="submit">Register</button>
+      <div class="switch">
+        Already have an account? <a href="#" onclick="switchToLogin()">Login here</a>
+      </div>
+    </form>
+
+    <form id="loginForm" class="d-none">
+      <h2>Login</h2>
+      <label for="loginEmail">Email</label>
+      <input type="email" id="loginEmail" required>
+      <span class="error d-none" id="loginEmailError"></span>
+
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" required>
+      <span class="error d-none" id="loginPasswordError"></span>
+
+      <button type="submit">Login</button>
+      <div class="switch">
+        Don't have an account? <a href="#" onclick="switchToRegister()">Register here</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="welcome-message d-none">
+    <h2 class="fuck">Welcome, <span id="userNameDisplay"></span>!</h2>
+    <button id="logoutButton">Logout</button>
+  </div>
+
+  <script src="js.js"></script>
+</body>
+</html>
